@@ -1,0 +1,16 @@
+<html>
+<head>
+ <title>Hello world</title>
+ <script src="/socket.io/socket.io.js"></script>
+ <script>
+  var socket = io.connect('http://localhost:3000');
+  socket.on('hello', function(data){
+    console.log(data);
+    socket.emit('hellothere', {data: 'whats up'});
+  });
+ </script>
+</head>
+<body>
+<h1>hey</h1>
+</body>
+</html>
